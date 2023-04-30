@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+
+<body>
+<header>
+   <p id="intro"><span>Statistical Memorable Web Calculator</span></p>
+
+</header>
+
+
+<main>
+   <div class="aside-box">
+      <p>foo aside</p>
+   </div>
+
+   <div class="main-box">
+      <div class="calculator-box">
+         <div class="description">
+            <p>You can calculate Statistical functions on the web, and this calculator can memorize your inputs. Make your statistics efficient and comfortable!!!</p>
+         </div>
+         
+         <div class="flex-box">
+            <div class="calculator-memory">
+               <div class="inner-box">
+                  <p id="memory-head-pointer">Result Memory</p>
+
+
+               </div>
+            </div>
+
+            <div class="calculator-machine">
+               <div class="inner-box">
+
+                  <div class="statistical-function">
+                     <p class="statistical-head">Click Statistical button</p>
+                     <button title="least squares method β0,β1 (最小二乗法)" class="statistical-button" id="argmin-solo"><p>y<sub>i</sub>=β<sub>0</sub>+β<sub>1</sub>x<sub>i</sub></p></button>
+                     <button title="least squares method β0 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta0"><p>y<sub>i</sub>=β<sub>0</sub>+x<sub>i</sub></p></button>
+                     <button title="least squares method β1 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta1"><p>y<sub>i</sub>=β<sub>1</sub>x<sub>i</sub></p></button>
+                     <button title="mean (平均値)" class="statistical-button" id="mean"><p class="x-before">x</p></button>
+                     <button title="variance (分散)" class="statistical-button" id="variance"><p>S<sub>xx</sub></p></button>
+                     <button title="covariance (共分散)" class="statistical-button" id="covariance"><p>S<sub>xy</sub></p></button>
+                     <button title="population mean (母平均)" class="statistical-button" id="population-mean"><p>μ</p></button>
+                     <button title="population variance (母分散)" class="statistical-button" id="population-variance"><p>σ<sup>2</sup></p></button>
+                     <button title="uncertainty (不確かさ)" class="statistical-button" id="uncertainty"><p>σ</p></button>
+                     <button title="population mean ± uncertainty (母平均±不確かさ)" class="statistical-button" id="x+uncertainty"><p>x + Δx</p></button>
+                     
+                  </div>
+   
+                  <div class="input-box">
+                     <textarea id="input-text" class="input-css" placeholder="x : 1st values"></textarea>
+                     <textarea id="input-text-second" class="input-css displayNone" placeholder="y : 2nd values"></textarea>
+                     <div class="example-and-button">
+                        <p>input as follow: 2,3,5,11,7,1,13</p>
+                        <input value="Click" type="button" id="input-button">
+                     </div>
+                  </div>
+
+   
+                  <!-- <div class="normal-function">
+                     <input type="button" class="normal-button" id="square">
+                     <input type="button" class="normal-button" id="cube">
+                     <input type="button" class="normal-button" id="root">
+                     <input type="button" class="normal-button" id="sin">
+                     <input type="button" class="normal-button" id="cos">
+                     <input type="button" class="normal-button" id="tan">
+                     <input type="button" class="normal-button" id="exp">
+                     <input type="button" class="normal-button" id="log">
+                  </div> -->
+
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+
+</main>
+
+
+
+<footer>
+   <div class="mysiteis-box">
+      <p><span>Statistical Memorable Web Calculator</span></p>
+      <p>Miwa</p>
+   </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>
