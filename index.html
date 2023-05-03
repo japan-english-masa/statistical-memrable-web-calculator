@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Statistical Memorable Web Calculator</title>
    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -17,21 +17,23 @@
 
 
 <main>
-   <div class="aside-box">
-      <p>foo aside</p>
-   </div>
+   
 
    <div class="main-box">
       <div class="calculator-box">
          <div class="description">
             <p>You can calculate Statistical functions on the web, and this calculator can memorize your inputs. Make your statistics efficient and comfortable!!!</p>
          </div>
+
+         
          
          <div class="flex-box">
             <div class="calculator-memory">
-               <div class="inner-box">
+               <div class="inner-box" id="inner-box">
                   <p id="memory-head-pointer">Result Memory</p>
+                  <div id="memory-dammy">
 
+                  </div>
 
                </div>
             </div>
@@ -41,16 +43,18 @@
 
                   <div class="statistical-function">
                      <p class="statistical-head">Click Statistical button</p>
-                     <button title="least squares method β0,β1 (最小二乗法)" class="statistical-button" id="argmin-solo"><p>y<sub>i</sub>=β<sub>0</sub>+β<sub>1</sub>x<sub>i</sub></p></button>
-                     <button title="least squares method β0 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta0"><p>y<sub>i</sub>=β<sub>0</sub>+x<sub>i</sub></p></button>
-                     <button title="least squares method β1 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta1"><p>y<sub>i</sub>=β<sub>1</sub>x<sub>i</sub></p></button>
-                     <button title="mean (平均値)" class="statistical-button" id="mean"><p class="x-before">x</p></button>
-                     <button title="variance (分散)" class="statistical-button" id="variance"><p>S<sub>xx</sub></p></button>
-                     <button title="covariance (共分散)" class="statistical-button" id="covariance"><p>S<sub>xy</sub></p></button>
-                     <button title="population mean (母平均)" class="statistical-button" id="population-mean"><p>μ</p></button>
-                     <button title="population variance (母分散)" class="statistical-button" id="population-variance"><p>σ<sup>2</sup></p></button>
-                     <button title="uncertainty (不確かさ)" class="statistical-button" id="uncertainty"><p>σ</p></button>
-                     <button title="population mean ± uncertainty (母平均±不確かさ)" class="statistical-button" id="x+uncertainty"><p>x + Δx</p></button>
+                     <div id="statistical-flex-button-container">
+                        <button title="least squares method β0,β1 (最小二乗法)" class="statistical-button" id="argmin-solo"><p>y<sub>i</sub>=β<sub>0</sub>+β<sub>1</sub>x<sub>i</sub></p></button>
+                        <button title="least squares method β0 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta0"><p>y<sub>i</sub>=β<sub>0</sub>+x<sub>i</sub></p></button>
+                        <button title="least squares method β1 (最小二乗法)" class="statistical-button" id="argmin-solo-only-beta1"><p>y<sub>i</sub>=β<sub>1</sub>x<sub>i</sub></p></button>
+                        <button title="mean (平均値)" class="statistical-button" id="mean"><p class="x-before">x</p></button>
+                        <button title="variance (分散)" class="statistical-button" id="variance"><p>S<sub>xx</sub></p></button>
+                        <button title="covariance (共分散)" class="statistical-button" id="covariance"><p>S<sub>xy</sub></p></button>
+                        <button title="population mean (母平均)" class="statistical-button" id="population-mean"><p>μ</p></button>
+                        <button title="population variance (母分散)" class="statistical-button" id="population-variance"><p>σ<sup>2</sup></p></button>
+                        <button title="uncertainty (不確かさ)" class="statistical-button" id="uncertainty"><p>σ</p></button>
+                        <button title="population mean ± uncertainty (母平均±不確かさ)" class="statistical-button x_plus_uncertainty" id="x+uncertainty"><p>x + Δx</p></button>
+                     </div>
                      
                   </div>
    
@@ -58,26 +62,120 @@
                      <textarea id="input-text" class="input-css" placeholder="x : 1st values"></textarea>
                      <textarea id="input-text-second" class="input-css displayNone" placeholder="y : 2nd values"></textarea>
                      <div class="example-and-button">
-                        <p>input as follow: 2,3,5,11,7,1,13</p>
+                        <p>input as follow: 2,3,5,11,7,13</p>
                         <input value="Click" type="button" id="input-button">
                      </div>
                   </div>
 
-   
-                  <!-- <div class="normal-function">
-                     <input type="button" class="normal-button" id="square">
-                     <input type="button" class="normal-button" id="cube">
-                     <input type="button" class="normal-button" id="root">
-                     <input type="button" class="normal-button" id="sin">
-                     <input type="button" class="normal-button" id="cos">
-                     <input type="button" class="normal-button" id="tan">
-                     <input type="button" class="normal-button" id="exp">
-                     <input type="button" class="normal-button" id="log">
-                  </div> -->
 
                </div>
             </div>
 
+         </div>
+
+         <div class="author-comment-box-container">
+            <div class="author-comment-box">
+               <p><span>I will add some more functions in this site. Look forward!</span></p>
+            </div>
+         </div>
+
+         <div class="function-description">
+            <p class="function-description-banner">Statistical Functions Description</p>
+            <div>
+               <p>y<sub>i</sub>=β<sub>0</sub>+β<sub>1</sub>x<sub>i</sub></p>
+               <p>You can get (β<sub>0</sub>,β<sub>1</sub>) value for least square method.</p>
+            </div>
+            <div>
+               <p>y<sub>i</sub>=β<sub>0</sub>+x<sub>i</sub></p>
+               <p>You can get β<sub>0</sub> value for least square method only using β<sub>0</sub>.</p>
+            </div>
+            <div>
+               <p>y<sub>i</sub>=β<sub>1</sub>x<sub>i</sub></p>
+               <p>You can get β<sub>1</sub> value for least square method only using β<sub>1</sub>.</p>
+            </div>
+            <div>
+               <p>x-</p>
+               <p>You can get the Mean for x values.</p>
+            </div>
+            <div>
+               <p>S<sub>xx</sub></p>
+               <p>You can get the Variance for x values.</p>
+            </div>
+            <div>
+               <p>S<sub>xy</sub></p>
+               <p>You can get the Covariance for (x,y) values.</p>
+            </div>
+            <div>
+               <p>μ</p>
+               <p>You can get the Population-Mean for x values.</p>
+            </div>
+            <div>
+               <p>σ<sup>2</sup></p>
+               <p>You can get the Population-Variance for x values.</p>
+            </div>
+            <div>
+               <p>σ</p>
+               <p>You can get the Uncertainty for x values.</p>
+            </div>
+            <div>
+               <p>x + Δx</p>
+               <p>You can get the "μ ± σ" for x values. It means the range of uncertainty for x values.</p>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+   <div class="aside-box">
+      <div class="aside-content-box">
+
+         <div class="how-to-use">
+            <ol>
+               <li>Click Statistical button.</li>
+               <li>Input values.</li>
+               <li>Click Calculate button.</li>
+               <li>The result will display.</li>
+            </ol>
+         </div>
+   
+         <div class="my-other-sites">
+            <p>My other Pages</p>
+            <!-- ここにGitHubの他のページを貼る。 -->
+            <a href="https://miwa-programming-and-aiweb.github.io/gradation-background-practice/">Animated Gradation Background.</a>
+            <a href="https://miwa-programming-and-aiweb.github.io/Bootstrap-practice/">Bootstrap practice.</a>
+            <a href="https://miwa-programming-and-aiweb.github.io/flex-practice/">Flex practice.</a>
+            <a href="https://miwa-programming-and-aiweb.github.io/CSS-animation-practice/">CSS Animation practice.</a>
+         </div>
+   
+         <div class="miwa-introduction">
+            <p class="for-tablet-about-miwa">About Miwa</p>
+               
+            <div class="miwa-introduction-flex-box">
+
+               <div class="miwa-introduction-flex-box-right">
+                  <div class="img-box">
+                     <img src="Hello.jpeg" alt="Hello guys!" id="HelloGuys">
+                     <p><span>Miwa</span></p>
+                  </div>
+               </div>
+
+               <div class="miwa-introduction-flex-box-left">
+                  <div class="introduction-list">
+                     <ul>
+                        <li ontouchstart="" id="introduction-list-web-designer">Web designer</li>
+                        <li>Game developer</li>
+                     </ul>
+                  </div>
+                  <div class="introduction-text">
+                     <p>College student in NITech majoring applied physics.</p>
+                     <p>Talk to me if you are interested! I'm in a LINE grounp for physics students and often in NITech library.</p>
+         
+                  </div>
+               </div>
+
+            </div>
+   
          </div>
 
       </div>
