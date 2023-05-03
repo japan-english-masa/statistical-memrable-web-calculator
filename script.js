@@ -1,4 +1,8 @@
 
+
+
+
+//about calculation
 let divisionNumber=0;
 const statistics1=document.getElementById("argmin-solo");
 const statistics2=document.getElementById("argmin-solo-only-beta0");
@@ -309,7 +313,7 @@ const inputButton=document.getElementById("input-button");
 
 inputButton.addEventListener("click",()=>{
    let Arr1=getArr1Func(document.getElementById("input-text").value);
-   const pointer=document.getElementById("memory-head-pointer");
+   const pointer=document.getElementById("memory-dammy");
 
    switch(divisionNumber){
       case 1:    //argmin-solo
@@ -324,7 +328,7 @@ inputButton.addEventListener("click",()=>{
 
          let item1=document.createElement("p");
          item1.textContent=`(β0,β1) = (${Math.round(beta_0In1*1000)/1000}, ${Math.round(beta_1In1*1000)/1000})`;
-         pointer.appendChild(item1);
+         pointer.prepend(item1);
          break;
 
       case 2:    //argmin-solo-only-beta0
@@ -334,7 +338,7 @@ inputButton.addEventListener("click",()=>{
 
          let item2=document.createElement("p");
          item2.textContent=`β0 = ${Math.round(beta_0In2*1000)/1000}`;
-         pointer.appendChild(item2);
+         pointer.prepend(item2);
          break;
 
       case 3:    //argmin-solo-only-beta1
@@ -344,7 +348,7 @@ inputButton.addEventListener("click",()=>{
 
          let item3=document.createElement("p");
          item3.textContent=`β1 = ${Math.round(beta_1In3*1000)/1000}`;
-         pointer.appendChild(item3);
+         pointer.prepend(item3);
          break;
 
       case 4:    //mean
@@ -353,7 +357,7 @@ inputButton.addEventListener("click",()=>{
 
          let item4=document.createElement("p");
          item4.textContent=`x- = ${Math.round(mean4*1000)/1000}`;
-         pointer.appendChild(item4);
+         pointer.prepend(item4);
          break;
 
       case 5:    //variance
@@ -362,7 +366,7 @@ inputButton.addEventListener("click",()=>{
 
          let item5=document.createElement("p");
          item5.textContent=`Sxx = ${Math.round(variance5*1000)/1000}`;
-         pointer.appendChild(item5);
+         pointer.prepend(item5);
          break;
 
       case 6:    //covariance
@@ -372,7 +376,7 @@ inputButton.addEventListener("click",()=>{
 
          let item6=document.createElement("p");
          item6.textContent=`Sxy = ${Math.round(covariance6*1000)/1000}`;
-         pointer.appendChild(item6);
+         pointer.prepend(item6);
          break;
 
       case 7:    //population-mean
@@ -381,7 +385,7 @@ inputButton.addEventListener("click",()=>{
 
          let item7=document.createElement("p");
          item7.textContent=`μ = ${Math.round(populationMean7*1000)/1000}`;
-         pointer.appendChild(item7);
+         pointer.prepend(item7);
          break;
       
       case 8:    //population-variance
@@ -391,7 +395,7 @@ inputButton.addEventListener("click",()=>{
 
          let item8=document.createElement("p");
          item8.textContent=`σ^2 = ${Math.round(populationVariance8*1000)/1000}`;
-         pointer.appendChild(item8);
+         pointer.prepend(item8);
          break;
 
       case 9:    //uncertainty
@@ -402,7 +406,7 @@ inputButton.addEventListener("click",()=>{
 
          let item9=document.createElement("p");
          item9.textContent=`σ = ${Math.round(uncertainty9*1000)/1000}`;
-         pointer.appendChild(item9);
+         pointer.prepend(item9);
          break;
 
       case 10:    //x±uncertainty
@@ -415,7 +419,7 @@ inputButton.addEventListener("click",()=>{
 
          let item10=document.createElement("p");
          item10.textContent=`x±Δx = ${Math.round(populationMean10*1000)/1000} ± ${Math.round(uncertainty10*1000)/1000}`;
-         pointer.appendChild(item10);
+         pointer.prepend(item10);
          break;
 
 
