@@ -1,4 +1,10 @@
-
+//line share button box
+const lineBtn=document.getElementById("line-button-box");
+const thank=document.getElementById("line-thank-button")
+lineBtn.addEventListener("click",()=>{
+   thank.classList.remove("displayNone");
+   thank.classList.add("line-thank-animation");
+})
 
 
 
