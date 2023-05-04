@@ -21,242 +21,29 @@ const statistics8=document.getElementById("population-variance");
 const statistics9=document.getElementById("uncertainty");
 const statistics10=document.getElementById("x+uncertainty");
 
-statistics1.addEventListener("click",()=>{
-   divisionNumber=1;
-   document.getElementById("input-text-second").classList.remove("displayNone");
-   statistics1.style.color="white"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="#ae3ce3";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics2.addEventListener("click",()=>{
-   divisionNumber=2;
-   document.getElementById("input-text-second").classList.remove("displayNone");
-   statistics1.style.color="black"
-   statistics2.style.color="white"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="#ae3ce3";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics3.addEventListener("click",()=>{
-   divisionNumber=3;
-   document.getElementById("input-text-second").classList.remove("displayNone");
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="white"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="#ae3ce3";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics4.addEventListener("click",()=>{
-   divisionNumber=4;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="white"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="#ae3ce3";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics5.addEventListener("click",()=>{
-   divisionNumber=5;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="white"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="#ae3ce3";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics6.addEventListener("click",()=>{
-   divisionNumber=6;
-   document.getElementById("input-text-second").classList.remove("displayNone");
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="white"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="#ae3ce3";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics7.addEventListener("click",()=>{
-   divisionNumber=7;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="white"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="#ae3ce3";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics8.addEventListener("click",()=>{
-   divisionNumber=8;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="white"
-   statistics9.style.color="black"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="#ae3ce3";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics9.addEventListener("click",()=>{
-   divisionNumber=9;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="white"
-   statistics10.style.color="black"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="#ae3ce3";
-   statistics10.style.backgroundColor="rgb(236, 236, 236)";
-})
-statistics10.addEventListener("click",()=>{
-   divisionNumber=10;
-   statistics1.style.color="black"
-   statistics2.style.color="black"
-   statistics3.style.color="black"
-   statistics4.style.color="black"
-   statistics5.style.color="black"
-   statistics6.style.color="black"
-   statistics7.style.color="black"
-   statistics8.style.color="black"
-   statistics9.style.color="black"
-   statistics10.style.color="white"
-   statistics1.style.backgroundColor="rgb(236, 236, 236)";
-   statistics2.style.backgroundColor="rgb(236, 236, 236)";
-   statistics3.style.backgroundColor="rgb(236, 236, 236)";
-   statistics4.style.backgroundColor="rgb(236, 236, 236)";
-   statistics5.style.backgroundColor="rgb(236, 236, 236)";
-   statistics6.style.backgroundColor="rgb(236, 236, 236)";
-   statistics7.style.backgroundColor="rgb(236, 236, 236)";
-   statistics8.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics9.style.backgroundColor="rgb(236, 236, 236)";
-   statistics10.style.backgroundColor="#ae3ce3";
-})
+const statArr=["space",statistics1,statistics2,statistics3,statistics4,statistics5,statistics6,statistics7,statistics8,statistics9,statistics10];
 
+for(let j=1;j<statArr.length;j++){
+   statArr[j].addEventListener("click",()=>{
+      
+      divisionNumber=j;
+   
+      for(let i=1;i<statArr.length;i++){
+         if(i != divisionNumber){
+            statArr[i].style.color="black";
+            statArr[i].style.backgroundColor="rgb(236, 236, 236)";
+         }else{
+            statArr[i].style.color="white";
+            statArr[i].style.backgroundColor="#ae3ce3";
+         }
+      }
+   
+      if(j == 1 || 2 || 3 || 6){
+         document.getElementById("input-text-second").classList.remove("displayNone");
+      }
+
+   })
+}
 
 
 
