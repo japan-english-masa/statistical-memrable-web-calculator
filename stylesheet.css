@@ -22,18 +22,71 @@
 #introduction-list-web-designer:hover{  /* Animation */
    animation: web-designer infinite linear 3s ;
 }
+@keyframes web-designer {
+   0%{color: red;}
+   14%{color: orange;}
+   28%{color: yellow;}
+   42%{color: greenyellow;}
+   56%{color: skyblue;}
+   70%{color: blue;}
+   84%{color: purple;}
+   98%{color: red;}
+   100%{color: red;}
+}
 
-   @keyframes web-designer {
-      0%{color: red;}
-      14%{color: orange;}
-      28%{color: yellow;}
-      42%{color: greenyellow;}
-      56%{color: skyblue;}
-      70%{color: blue;}
-      84%{color: purple;}
-      98%{color: red;}
-      100%{color: red;}
+.line-thank-button{
+   position: fixed;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+   background-color: rgba(37, 231, 37, 0.762);
+   width: 100%;
+   height: 70%;
+   z-index: 10;
+}
+   .line-thank-button p{
+      color: white;
+      font-size: 5rem;
+      font-family: fantasy, sans-serif;
+      /* width: 100%; */
+      /* height: 50%; */
+      text-align: center;
+      margin-top: 15vh;
+      padding: 0 4%;
+      transform: translateY(-40%);
+      animation: line-thank-p 4s ease forwards;
    }
+.line-thank-animation{
+   animation: line-thank 4s linear forwards;
+}
+   @keyframes line-thank {
+      0%{
+         opacity: 0;
+      }
+      20%{
+         opacity: 1;
+      }
+      80%{
+         opacity: 1;
+      }
+      100%{
+         opacity: 0;
+         pointer-events: none;
+      }
+   }
+   @keyframes line-thank-p {
+      0%{
+         transform: translateX(-100vw);
+      }
+      100%{
+         transform: translateX(100vw);
+      }
+   }
+
+
+
+
+
 
 
 
@@ -263,6 +316,20 @@
          font-size: 1.2rem;
          color: white;
       }
+
+      .line-button-box{
+         padding: 0 5%;
+         text-align: right;
+         margin-bottom: -1rem;
+      }
+         .line-text{
+            color: white;
+            display: inline-block;
+            font-size: 1rem;
+            transform: translateY(-6px);
+            padding-right: .2rem;
+         }
+
    
       .flex-box{
          display: flex;
@@ -488,6 +555,19 @@ main{
          color: white;
          font-size: 1.1rem;
       }
+
+      .line-button-box{
+         text-align: right;
+         margin-bottom: -3rem;
+         margin-top: 2rem;
+      }
+         .line-text{
+            color: white;
+            display: inline-block;
+            font-size: 1rem;
+            transform: translateY(-6px);
+            padding-right: .2rem;
+         }
 
 
       .flex-box{
@@ -839,6 +919,20 @@ main{
          font-size: 1.1rem;
          padding-bottom: 3rem;
       }
+
+      .line-button-box{
+         text-align: right;
+         /* margin-bottom: -3rem; */
+         margin-top: 2rem;
+      }
+         .line-text{
+            color: white;
+            display: inline-block;
+            font-size: 1rem;
+            transform: translateY(-6px);
+            padding-right: .2rem;
+         }
+
 
       .calculator-box .flex-box{
          display: flex;
