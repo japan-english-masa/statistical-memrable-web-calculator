@@ -38,8 +38,10 @@ for(let j=1;j<statArr.length;j++){
          }
       }
    
-      if(j == 1 || 2 || 3 || 6){
+      if(j===1 || j===2 || j===3 || j===6){
          document.getElementById("input-text-second").classList.remove("displayNone");
+      }else{
+         document.getElementById("input-text-second").classList.add("displayNone");
       }
 
    })
