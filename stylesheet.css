@@ -1,1151 +1,227 @@
-
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: sans-serif;
-}
-
-:root{
-   --dominantColor: #a424df;
-   --pointColor: rgb(112, 234, 193);
-   --black: black;
-   --white: white;
-}
-#memory-dammy{
-   width: 90%;
-   margin: auto;
-   color: white;
-   font-size: 1.2rem;
-}
-
-#introduction-list-web-designer:hover{  /* Animation */
-   animation: web-designer infinite linear 3s ;
-}
-@keyframes web-designer {
-   0%{color: red;}
-   14%{color: orange;}
-   28%{color: yellow;}
-   42%{color: greenyellow;}
-   56%{color: skyblue;}
-   70%{color: blue;}
-   84%{color: purple;}
-   98%{color: red;}
-   100%{color: red;}
-}
-
-.line-thank-button{
-   position: fixed;
-   top: 50%;
-   left: 0;
-   transform: translateY(-50%);
-   background-color: rgba(37, 231, 37, 0.762);
-   width: 100%;
-   height: 70%;
-   z-index: 10;
-}
-   .line-thank-button p{
-      color: white;
-      font-size: calc(1rem + 5vw);
-      font-family: fantasy, sans-serif;
-      text-align: center;
-      margin-top: 15vh;
-      padding: 0 4%;
-      transform: translateY(-50%);
-      animation: line-thank-p 4s ease forwards;
-   }
-.line-thank-animation{
-   animation: line-thank 4s linear forwards;
-}
-   @keyframes line-thank {
-      0%{
-         opacity: 0;
-      }
-      20%{
-         opacity: 1;
-      }
-      80%{
-         opacity: 1;
-      }
-      100%{
-         opacity: 0;
-         pointer-events: none;
-      }
-   }
-   @keyframes line-thank-p {
-      0%{
-         transform: translateX(-100vw);
-      }
-      100%{
-         transform: translateX(100vw);
-      }
-   }
+//line share button box
+const lineBtn=document.getElementById("line-button-box");
+const thank=document.getElementById("line-thank-button")
+lineBtn.addEventListener("click",()=>{
+   thank.classList.remove("displayNone");
+   thank.classList.add("line-thank-animation");
+})
 
 
 
+//about calculation
+let divisionNumber=0;
+const statistics1=document.getElementById("argmin-solo");
+const statistics2=document.getElementById("argmin-solo-only-beta0");
+const statistics3=document.getElementById("argmin-solo-only-beta1");
+const statistics4=document.getElementById("mean");
+const statistics5=document.getElementById("variance");
+const statistics6=document.getElementById("covariance");
+const statistics7=document.getElementById("population-mean");
+const statistics8=document.getElementById("population-variance");
+const statistics9=document.getElementById("uncertainty");
+const statistics10=document.getElementById("x+uncertainty");
 
+const statArr=["space",statistics1,statistics2,statistics3,statistics4,statistics5,statistics6,statistics7,statistics8,statistics9,statistics10];
 
-
-
-
-@media screen and (min-width:1100px) {
-   header{
-      background-color: var(--black);
-      width: 100%;
-      height: 8rem;
-   }
-   
-      #intro{
-         color: var(--white);
-         font-size: 1.6rem;
-         text-align: center;
-         padding-top: 3rem;
-         padding-left: 36%;
-         width: 80%;
-         position: relative;
-      }
-      #intro::before{
-         position: absolute;
-         content: "";
-         background: url(Gauss_distribution.png) center/contain;
-         width: 12rem;
-         height: 5rem;
-         bottom: -.2rem;
-         left: 18%;
-      }
-      #intro span{
-         position: relative;
-      }
-      #intro span::before{
-         content: "";
-         position: absolute;
-         bottom: 3px;
-         left: 0;
-         width: 120%;
-         height: 1px;
-         background-color: var(--white);
-         transform: translateX(-7%);
-      }
-   
-   
-   footer{
-      background-color: var(--black);
-      width: 100%;
-      height: 10rem;
-      color: var(--white);
-   }
-      .mysiteis-box{
-         padding-top: 3rem;
-         text-align: center;
-      }
-         .mysiteis-box span:nth-child(1){
-            font-size: 1.5rem;
-            position: relative;
-         }
-         .mysiteis-box span:nth-child(1)::before{
-            content: "";
-            position: absolute;
-            bottom: 4px;
-            left: 0;
-            width: 120%;
-            height: 1px;
-            background-color: var(--white);
-            transform: translateX(-8%);
-         }
-   
-         .mysiteis-box p:nth-child(2){
-            font-size: 1rem;
-            padding-top: .2rem;
-         }
-         .mysiteis-box p:nth-child(2)::before{
-            content: "©";
-            padding-right: .2rem;
-         }
-   
-   
-   
-   
-   
-   .inner-box{
-      margin: 1rem 6% 2rem;
-   }
-   
-   
-   
-   main{
-   margin: auto;
-   width:100%;
-   /* height: 100rem; */
-   background-color: var(--dominantColor);
-   display: flex;
-   flex-direction: row;
-   }
-   
-   .aside-box{
-   background-color: rgba(255, 255, 255, 0.407);
-   width: 22%;
-   margin: 4rem 0 4rem 2%;
-   order: 2;
-   /* height: 50rem; */
-   }
-      .how-to-use{
-         width: 90%;
-         color: white;
-         margin: auto;
-         margin-top: 2rem;
-         border: 2px solid white;
-         padding-left: 4%;
-      }
-         .how-to-use ol{
-            margin-left: 8%;
-            margin-top: .6rem;
-         }
-         .how-to-use li{
-            margin-bottom: .6rem;
-         }
-   
-      .my-other-sites{
-         width: 90%;
-         margin: auto;
-         color: var(--white);
-         font-size: 1.2rem;
-         margin-top: 4rem;
-      }
-         .my-other-sites p:first-child{
-            border-bottom: 2px solid var(--white);
-            margin-bottom: .4rem;
-         }
-   
-         .my-other-sites a{
-            font-size: 1rem;
-            display: block;
-            padding-left: 1.2rem;
-            margin-bottom: .2rem;
-         }
-         .my-other-sites a::before{
-            content: "#";
-            margin-left: -.8rem;
-         }
-         .my-other-sites  a:nth-child(odd){
-            color: rgb(255, 255, 255);
-         }
-         .my-other-sites  a:nth-child(even){
-            color: rgb(252, 217, 255);
-         }
-   
+for(let j=1;j<statArr.length;j++){
+   statArr[j].addEventListener("click",()=>{
       
-      .miwa-introduction{
-         margin-top: 6rem;
-         margin-bottom: 3rem;
+      divisionNumber=j;
+   
+      for(let i=1;i<statArr.length;i++){
+         if(i != divisionNumber){
+            statArr[i].style.color="black";
+            statArr[i].style.backgroundColor="rgb(236, 236, 236)";
+         }else{
+            statArr[i].style.color="white";
+            statArr[i].style.backgroundColor="#ae3ce3";
+         }
       }
-         .for-tablet-about-miwa{
-            display: none;
-         }
-         .img-box{
-            width: 90%;
-            margin: auto;
-            margin-top: 1rem;
-         }
-            #HelloGuys{
-               border: 4px solid white;
-               display: block;
-               width: 100%;
-            }
-            .img-box p{
-               color: white;
-               font-size: 1.4rem;
-               display: flex;
-               justify-content: flex-end;
-               padding-top: .1rem;
-               position: relative;
-               padding-right: .3rem;
-            }
-            .img-box p span::before{
-               content: "";
-               position: absolute;
-               bottom: 0;
-               right: 0;
-               background-color: white;
-               width: 90%;
-               height: 1px;
-            }
    
-         .introduction-list{
-            color: white;
-            width: 90%;
-            margin: auto;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-         }
-            .introduction-list ul{
-               list-style: none;
-            }
-            .introduction-list li::before{
-               content: "★";
-               font-size: .9rem;
-               padding-left: 1.2rem;
-               padding-right: .3rem;
-            }
-   
-         .introduction-text{
-            width: 90%;
-            margin: auto;
-            color: white;
-            margin-top: .6rem;
-         }
-            .introduction-text p{
-               margin-bottom: .6rem;
-            }
+      if(j===1 || j===2 || j===3 || j===6){
+         document.getElementById("input-text-second").classList.remove("displayNone");
+      }else{
+         document.getElementById("input-text-second").classList.add("displayNone");
+      }
+
+   })
+}
 
 
+
+
+function getArr1Func(input1){    //1st valuesの配列を生成＆全角入力へのアラート
+   const inputTextArr1=input1.split(",");
+   const inputArr1=[];
+   for(let i=0;i<inputTextArr1.length;i++){
+      if( inputTextArr1.indexOf("０") != -1 || inputTextArr1.indexOf("１") != -1 || inputTextArr1.indexOf("２") != -1 || inputTextArr1.indexOf("３") != -1 || inputTextArr1.indexOf("４") != -1 || inputTextArr1.indexOf("５") != -1 || inputTextArr1.indexOf("６") != -1 || inputTextArr1.indexOf("７") != -1 || inputTextArr1.indexOf("８") != -1 || inputTextArr1.indexOf("９") != -1 ){
+         alert("半角で入力してください");
+         break;
+      }
+      let inputArr1element=parseFloat(inputTextArr1[i]);
+      inputArr1.push(inputArr1element);
+   }
+   return inputArr1;
+}
+
+function getArr2Func(input2){    //2nd valuesの配列を生成
+   const inputTextArr2=input2.split(",");
+   const inputArr2=[];
+   for(let i=0;i<inputTextArr2.length;i++){
+      let inputArr2element=parseFloat(inputTextArr2[i]);
+      inputArr2.push(inputArr2element);
+   }
+   return inputArr2;
+}
+
+
+function meanFunc(Arr){    //平均値を求める
+   let sum=0;
+   for(let i=0;i<Arr.length;i++){
+      sum+=Arr[i];
+   }
+   let mean=sum / Arr.length;
+   return mean;
+}
+
+function squareMeanFunc(Arr){    //2乗の平均値を求める
+   let squareSum=0;
+   for (let i=0;i<Arr.length;i++){
+      squareSum+=Arr[i] ** 2;
+   }
+   let squareMean=squareSum / Arr.length;
+   return squareMean;
+}
+
+function productMeanFunc(Arr1,Arr2){    //積の平均値を求める
+   let productSum=0;
+   for(let i=0;i<Arr1.length;i++){
+      productSum+=Arr1[i] * Arr2[i];
+   }
+   let productMean=productSum / Arr1.length;
+   return productMean;
+}
+
+
+
+const inputButton=document.getElementById("input-button");
+
+inputButton.addEventListener("click",()=>{
+   let Arr1=getArr1Func(document.getElementById("input-text").value);
+   const pointer=document.getElementById("memory-dammy");
+
+   switch(divisionNumber){
+      case 1:    //argmin-solo
+         let Arr2In1=getArr2Func(document.getElementById("input-text-second").value);
+         let meanX1=meanFunc(Arr1);
+         let meanY1=meanFunc(Arr2In1);
+         let varianceX1=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
+         let covariance1=productMeanFunc(Arr1,Arr2In1) - meanFunc(Arr1)*meanFunc(Arr2In1);
+         let beta_1In1=covariance1/varianceX1;
+         let beta_0In1=meanY1 - beta_1In1 * meanX1;
+         console.log(`(β0,β1) = (${beta_0In1}, ${beta_1In1})`);
+
+         let item1=document.createElement("p");
+         item1.textContent=`(β0,β1) = (${Math.round(beta_0In1*1000)/1000}, ${Math.round(beta_1In1*1000)/1000})`;
+         pointer.prepend(item1);
+         break;
+
+      case 2:    //argmin-solo-only-beta0
+         let Arr2In2=getArr2Func(document.getElementById("input-text-second").value);
+         let beta_0In2=meanFunc(Arr2In2);
+         console.log(beta_0In2);
+
+         let item2=document.createElement("p");
+         item2.textContent=`β0 = ${Math.round(beta_0In2*1000)/1000}`;
+         pointer.prepend(item2);
+         break;
+
+      case 3:    //argmin-solo-only-beta1
+         let Arr2In3=getArr2Func(document.getElementById("input-text-second").value);
+         let beta_1In3=productMeanFunc(Arr1,Arr2In3) / squareMeanFunc(Arr1);
+         console.log(beta_1In3);
+
+         let item3=document.createElement("p");
+         item3.textContent=`β1 = ${Math.round(beta_1In3*1000)/1000}`;
+         pointer.prepend(item3);
+         break;
+
+      case 4:    //mean
+         let mean4=meanFunc(Arr1);
+         console.log(mean4);
+
+         let item4=document.createElement("p");
+         item4.textContent=`x- = ${Math.round(mean4*1000)/1000}`;
+         pointer.prepend(item4);
+         break;
+
+      case 5:    //variance
+         let variance5=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
+         console.log(variance5);
+
+         let item5=document.createElement("p");
+         item5.textContent=`Sxx = ${Math.round(variance5*1000)/1000}`;
+         pointer.prepend(item5);
+         break;
+
+      case 6:    //covariance
+         let Arr2In6=getArr2Func(document.getElementById("input-text-second").value);
+         let covariance6=productMeanFunc(Arr1,Arr2In6) - meanFunc(Arr1)*meanFunc(Arr2In6);
+         console.log(covariance6);
+
+         let item6=document.createElement("p");
+         item6.textContent=`Sxy = ${Math.round(covariance6*1000)/1000}`;
+         pointer.prepend(item6);
+         break;
+
+      case 7:    //population-mean
+         let populationMean7=meanFunc(Arr1);
+         console.log(populationMean7);
+
+         let item7=document.createElement("p");
+         item7.textContent=`μ = ${Math.round(populationMean7*1000)/1000}`;
+         pointer.prepend(item7);
+         break;
       
-   
-   
-   
-   .main-box{
-   background-color: rgba(255, 255, 255, 0.407);
-   width: 74%;
-   margin: 4rem 3% 4rem 3%;
-   order: 3;
-   }
-   
-      .description{
-         padding: 5%;
-         font-size: 1.2rem;
-         color: white;
-      }
+      case 8:    //population-variance
+         let variance8=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
+         let populationVariance8=(Arr1.length/(Arr1.length-1))*variance8;
+         console.log(populationVariance8);
 
-      .line-button-box{
-         padding: 0 5%;
-         text-align: right;
-         margin-bottom: -1rem;
-      }
-         .line-text{
-            color: white;
-            display: inline-block;
-            font-size: 1rem;
-            transform: translateY(-6px);
-            padding-right: .2rem;
-         }
+         let item8=document.createElement("p");
+         item8.textContent=`σ^2 = ${Math.round(populationVariance8*1000)/1000}`;
+         pointer.prepend(item8);
+         break;
 
-   
-      .flex-box{
-         display: flex;
-         flex-direction: row;
-      }
-   
-         .calculator-memory{
-            width: 30%;
-            margin: 1rem 0 1rem 4%;
-            background-color: var(--pointColor);
-         }
-            .calculator-memory p{
-               font-size: 1.1rem;
-               margin-bottom: .2rem;
-               text-align: left;
-               color: white;
-            }
-               #memory-head-pointer{
-                  font-size: 1.2rem;
-                  text-align: center;
-                  color: rgb(255, 255, 255);  
-               }
-   
-   
-         .calculator-machine{
-            width: 60%;
-            margin: 1rem 4% 1rem 2%;
-            background-color: var(--pointColor);
-         }
-   
-            .statistical-function{
-   
-            }
-               .statistical-head{
-                  font-size: 1.2rem;
-                  text-align: center;
-                  color: var(--white);
-                  margin-bottom: 1rem;
-               }
+      case 9:    //uncertainty
+         let variance9=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
+         let populationVariance9=(Arr1.length/(Arr1.length-1))*variance9;
+         let uncertainty9=populationVariance9 ** (1/2);
+         console.log(uncertainty9);
 
+         let item9=document.createElement("p");
+         item9.textContent=`σ = ${Math.round(uncertainty9*1000)/1000}`;
+         pointer.prepend(item9);
+         break;
 
-               #statistical-flex-button-container{
-                  display: flex;
-                  flex-direction: row;
-                  flex-wrap: wrap;
-                  margin-bottom: 1.5rem;
-               }
-                  #statistical-flex-button-container button{
-                     width: 5.9rem;
-                     height: 3rem;
-                     display: inline-block;
-                     margin-bottom: .2rem;
-                     margin-right: .1rem;
-                     margin-left: .1rem;
-                     cursor: pointer;
-                  }
-                     .x_plus_uncertainty{
-                        justify-self: left;
-                     }
+      case 10:    //x±uncertainty
+         let variance10=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
+         let populationVariance10=(Arr1.length/(Arr1.length-1))*variance10;
+         let uncertainty10=populationVariance10 ** (1/2);
+         let populationMean10=meanFunc(Arr1);
+         let x_uncertainty10=populationMean10+" "+"±"+" "+uncertainty10;
+         console.log(x_uncertainty10);
 
-
-   
-               .statistical-button{
-                  width: calc(100% / 5 + .5rem);
-                  height: 3rem;
-                  margin-bottom: .4rem;
-                  border: 1px solid black;
-                  background-color: rgb(236, 236, 236);
-                  font-size: .97rem;
-               }
-               .statistical-button:active{
-                  transform: perspective(100px) translateZ(-10px);
-               }
-                  .x-before{
-                     position: relative;
-                  }
-                  .x-before::before{
-                     content: "ー";
-                     position: absolute;
-                     top: -.6rem;
-                     left: calc(40%);
-                     font-size: 1rem;
-                  }
-   
-               
-            .input-box{
-               margin: 2rem 0 1.4rem;
-            }
-               .input-css{
-                  width: 100%;
-                  height: 3rem;
-                  padding: .6rem;
-                  font-size: 1.15rem;
-                  resize: none;
-                  text-transform:lowercase;
-               }
-               .displayNone{
-                  display: none;
-               }
-   
-               .example-and-button{
-                  display: flex;
-                  justify-content: space-between;
-               }
-                  .example-and-button p{
-                     transform: translateY(8px);
-                  }
-   
-                  #input-button{
-                     width: 16%;
-                     height: 2.2rem;
-                     transform: translateY(-2px);
-                     display: block;
-                     margin-left: auto;
-                     cursor: pointer;
-                  }
-                  #input-button:active{
-                     transform: perspective(100px) translateZ(-10px);
-                  }
-   
-   
-      .author-comment-box-container{
-         width: 90%;
-         margin: auto;
-      }
-   
-      .author-comment-box{
-         color: white;
-         font-size: 1.1rem;
-         margin-top: 6rem;
-         display: flex;
-         justify-content: flex-end;
-      }
-         .author-comment-box span{
-            border: 2px solid var(--white);
-            padding: .2rem 2rem;
-         }
-   
-   
-      .function-description{
-         width: 90%;
-         margin: auto;
-         margin-top: 6rem;
-         color: white;
-      }
-         .function-description-banner{
-            color: white;
-            border-bottom: 4px solid var(--pointColor);
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-         }
-   
-         .function-description div{
-            margin-bottom: 1.5rem;
-            margin-left: 1rem;
-         }
-            .function-description div p:first-child{
-               border-bottom: 1px solid white;
-               width: 20rem;
-               padding-left: .5rem;
-            }
-   
-
-}
-
-
-
-@media screen and (min-width:760px) and (max-width:1099px) {
-header{
-   background-color: black;
-   color: white;
-   height: 7.5rem;
-}
-   header #intro{
-      padding-top: 3rem;
-      position: relative;
-      text-align: right;
-      margin-right: 10vw;
-      font-size: 1.4rem;
-   }
-   header #intro::before{
-      content: "";
-      position: absolute;
-      top: .4rem;
-      left: 4rem;
-      background: url(Gauss_distribution.png) center/cover;
-      width: 10rem;
-      height: 5rem;
-   }
-   #intro span{
-      position: relative;
-   }
-   #intro span::before{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateX(-2em);
-      content: "";
-      width: 22em;
-      height: 1px;
-      background-color: white;
-
-   }
-
-
-main{
-   background-color: var(--dominantColor);
-   padding-top: 4rem;
-   padding-bottom: 6rem;
-}
-
-.main-box{
-   width: 90%;
-   margin: auto;
-   padding-top: 2rem;
-   background-color: rgba(255, 255, 255, 0.407);
-}
-   .calculator-box{
-      width: 90%;
-      margin: auto;
-   }
-      .description{
-         color: white;
-         font-size: 1.1rem;
-      }
-
-      .line-button-box{
-         text-align: right;
-         margin-bottom: -3rem;
-         margin-top: 2rem;
-      }
-         .line-text{
-            color: white;
-            display: inline-block;
-            font-size: 1rem;
-            transform: translateY(-6px);
-            padding-right: .2rem;
-         }
-
-
-      .flex-box{
-         display: flex;
-         gap: 4%;
-         margin-top: 3rem;
-      }
-
-         .calculator-memory{
-            width: 40%;
-            background-color: var(--pointColor);
-         }
-            #memory-head-pointer{
-               color: white;
-               text-align: center;
-               font-size: 1.2rem;
-               padding-top: .5rem;
-               margin-bottom: .4rem;
-            }
-            #memory-head-pointer p:nth-child(n){
-               color: black;
-               text-align: left;
-               padding: .1rem .8rem 0;
-               font-size: 1rem;
-            }
-            
-
-
-         .calculator-machine{
-            width: 60%;
-            background-color: var(--pointColor);
-            padding: 0 3%;
-            
-         }
-            .statistical-head{
-               color: white;
-               text-align: center;
-               font-size: 1.2rem;
-               padding-top: .5rem;
-               margin-bottom: .4rem;
-            }
-
-            #statistical-flex-button-container{
-               display: flex;
-               flex-direction: row;
-               flex-wrap: wrap;
-               margin-bottom: 1.5rem;
-               
-            }
-               #statistical-flex-button-container button{
-                  width: 4.8rem;
-                  height: 2.4rem;
-                  display: inline-block;
-                  margin-bottom: .3rem;
-                  margin-right: .1rem;
-                  margin-left: .1rem;
-                  cursor: pointer;
-                  border: 1px solid black;
-               }
-                  .x_plus_uncertainty{
-                     justify-self: left;
-                  }
-
-            
-            .input-box{
-
-            }
-               .input-css{
-                  width: 100%;
-                  padding: .4rem .6rem;
-                  font-size: 1.05rem;
-                  height: 2.5rem;
-               }
-
-               .displayNone{
-                  display: none;
-               }
-
-               .example-and-button{
-                  display: flex;
-                  justify-content: space-between;
-                  vertical-align: bottom;
-                  padding-bottom: 2rem;
-               }
-                  .example-and-button p{
-                     transform: translateY(.5rem);
-                  }
-
-                  #input-button{
-                     width: 5rem;
-                     height: 2rem;
-                  cursor: pointer;
-                  }
+         let item10=document.createElement("p");
+         item10.textContent=`x±Δx = ${Math.round(populationMean10*1000)/1000} ± ${Math.round(uncertainty10*1000)/1000}`;
+         pointer.prepend(item10);
+         break;
 
 
          
-      .author-comment-box{
-         display: flex;
-         justify-content: flex-end;
-         margin-top: 3rem;
-      }
-      .author-comment-box span{
-         color: white;
-         border: 2px solid white;
-         padding: .2rem .5rem;
-      }
 
-
-      .function-description{
-         margin-top: 3rem;
-         padding-bottom: 3rem;
-      }
-         .function-description-banner{
-            color: white;
-            font-size: 1.3rem;
-            border-bottom: 4px solid var(--pointColor);
-            margin-bottom: 1rem;
-         }
-
-         .function-description div{
-            margin-bottom: 1rem;
-            color: white;
-         }
-            .function-description div p:first-child{
-               border-bottom: 1px solid white;
-               width: 14rem;
-               padding-left: .5rem;
-            }
-   
-
-
-.aside-box{
-   width: 90%;
-   margin: auto;
-   padding-top: 2rem;
-   background-color: rgba(255, 255, 255, 0.407);
-   margin-top: 4rem;
-   padding-bottom: 4rem;
-}
-
-.aside-content-box{
-   width: 90%;
-   margin: auto;
-}
-   .how-to-use{
-      border: 1px solid white;
-      width: 18rem;
-      padding-left: 4em;
-      color: white;
-      margin-bottom: 4rem;
+      default:
+         console.log("Error");
    }
-      .how-to-use ol{
-         margin-top: .4rem;
-      }
-      .how-to-use li{
-         margin-bottom: .4rem;
-      }
+})
 
-
-   .my-other-sites{
-      margin-bottom: 4rem;
-   }
-      .my-other-sites p:first-child{
-         color: white;
-         font-size: 1.5rem;
-         width: 13rem;
-         margin-left: auto;
-         position: relative;
-         margin-bottom: .4rem;
-      }
-      .my-other-sites p:first-child::after{
-         content: "";
-         position: absolute;
-         bottom: 1px;
-         right: 0;
-         background-color: var(--pointColor);
-         width: 81vw;
-         height: .2rem;
-      }
-         .my-other-sites a{
-            display: block;
-            padding-left: 8vw;
-            margin-bottom: .2rem;
-         }
-         .my-other-sites a:nth-child(odd){
-            color: white;
-         }
-         .my-other-sites a:nth-child(even){
-            color: rgb(252, 217, 255);
-         }
-         .my-other-sites a::before{
-            content: "#";
-            padding-right: .2rem;
-         }
-
-   
-   .miwa-introduction{
-      color: white;
-   }
-      .miwa-introduction .for-tablet-about-miwa{
-         text-align: right;
-         border-bottom: .3rem solid var(--pointColor);
-         padding-right: 4rem;
-         font-size: 1.5rem;
-         margin-bottom: .6rem;
-      }
-
-      .miwa-introduction-flex-box{
-         display: flex;
-
-      }
-         .miwa-introduction-flex-box-right{
-            order: 3;
-         }
-            .img-box p{
-               display: none;
-            }
-            .img-box{
-               text-align: right;
-               margin-left: .5rem;
-            }
-
-         .miwa-introduction-flex-box-left{
-            order: 2;
-         }
-            .introduction-list ul{
-               list-style: none;
-               padding-left: 10vw;
-            }
-            .introduction-list li{
-               position: relative;
-               font-style: italic;
-               width: 9rem;
-            }
-            .introduction-list li::before{
-               content: "★";
-               position: absolute;
-               bottom: 0;
-               left: -1rem;
-               padding-right: .5rem;
-               border-bottom: 1px solid white;
-               width: 10rem;
-            }
-
-            #introduction-list-web-designer:hover{  /* Animation */
-               animation: web-designer infinite linear 3s;
-            }
-               @keyframes web-designer {
-                  0%{color: red;}
-                  14%{color: orange;}
-                  28%{color: yellow;}
-                  42%{color: greenyellow;}
-                  56%{color: skyblue;}
-                  70%{color: blue;}
-                  84%{color: purple;}
-                  98%{color: red;}
-                  100%{color: red;}
-               }
-
-            .introduction-text p{
-               margin-top: .3rem;
-               text-align: left;
-            }
-
-footer{
-   background-color: black;
-   height: 9rem;
-   width: 100%;
-   color: white;
-}
-   .mysiteis-box{
-      text-align: center;
-      padding-top: 3rem;
-   }
-   
-      .mysiteis-box p:first-child{
-         font-size: 1.4rem;
-      }
-      .mysiteis-box span{
-         position: relative;
-      }
-      .mysiteis-box span::before{
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         content: "";
-         background-color: white;
-         width: 120%;
-         height: 1px;
-         transform: translateX(-8%);
-      }
-
-      .mysiteis-box p:nth-child(2)::before{
-         content: "©";
-         padding-right: .4rem;
-         font-size: 1.1rem;
-
-      }
-
-.img-box img{
-   width: 17rem;
-   height: 10rem;
-}
-}
-
-
-
-@media screen and (max-width:759px) {
-header{
-   background-color: black;
-   color: white;
-   height: 6rem;
-   font-size: 1.4rem;
-   text-align: center;
-   padding-top: 5%;
-   position: relative;
-}
-   #intro::before{
-      content: "";
-      position: absolute;
-      bottom: 5%;
-      left: 50%;
-      transform: translateX(-5.5rem);
-      background: url(Gauss_distribution.png) center/cover;
-      width: 11rem;
-      height: 5rem;
-   }
-
-main{
-   background-color: var(--dominantColor);
-   padding-top: 3rem;
-   padding-bottom: 6rem;
-}
-
-.main-box{
-   background-color: rgba(255, 255, 255, 0.407);
-   width: 94%;
-   margin: auto;
-}
-   .calculator-box{
-      width: 90%;
-      margin: auto;
-      padding-top: 1.5rem;
-      padding-bottom: 4rem;
-   }
-
-      .description{
-         color: white;
-         font-size: 1.1rem;
-         padding-bottom: 3rem;
-      }
-
-      .line-button-box{
-         text-align: right;
-         /* margin-bottom: -3rem; */
-         margin-top: 2rem;
-      }
-         .line-text{
-            color: white;
-            display: inline-block;
-            font-size: 1rem;
-            transform: translateY(-6px);
-            padding-right: .2rem;
-         }
-
-
-      .calculator-box .flex-box{
-         display: flex;
-         flex-direction: column;
-      }
-
-         .calculator-memory{
-            order: 3;
-            background-color: var(--pointColor);
-            margin-bottom: 6rem;
-         }
-            #memory-head-pointer{
-               color: white;
-               text-align: center;
-               font-size: 1.2rem;
-               padding-top: .5rem;
-               padding-bottom: .2rem;
-            }
-
-         .calculator-machine{
-            order: 1;
-            background-color: var(--pointColor);
-            margin-bottom: 2rem;
-         }
-            .statistical-head{
-               color: white;
-               text-align: center;
-               font-size: 1.2rem;
-               padding-top: .5rem;
-               padding-bottom: .5rem;
-            }
-
-            #statistical-flex-button-container{
-               display: flex;
-               flex-wrap: wrap;
-               gap: 2px;
-               width: 96%;
-               margin: auto;
-               padding-bottom: 1.5rem;
-            }
-               .statistical-button{
-                  border: 1px solid black;
-                  width: calc((100% / 4) - 2px);
-                  height: 2.5rem;
-               }
-
-            .input-box{
-               width: 95%;
-               margin: auto;
-            }
-               .input-css{
-                  width: 100%;
-                  font-size: 1.1rem;
-                  height: 2.5rem;
-                  padding: .1rem .6rem;
-               }
-               .displayNone{
-                  display: none;
-               }
-
-               .example-and-button{
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  padding-bottom: 2rem;
-               }
-                  #input-button{
-                     width: 4rem;
-                     height: 1.6rem;
-                  }
-                  .example-and-button p{
-                     transform: translateY(4px);
-                     padding-left: 4px;
-                  }
-
-   .author-comment-box-container{
-      border: 2px solid white;
-      color: white;
-      padding: .4rem .8rem;
-      margin-bottom: 4rem;
-   }
-                  
-   .function-description{
-      color: white;
-   }
-      .function-description-banner{
-         border-bottom: 4px solid var(--pointColor);
-         font-size: 1.3rem;
-         margin-bottom: .6rem;
-      }
-
-      .function-description div{
-         margin-bottom: 1rem;
-      }
-         .function-description div p:first-child{
-            border-bottom: 1px solid white;
-            width: 16rem;
-            padding-left: .5rem;
-         }
-
-
-.aside-box{
-   background-color: rgba(255, 255, 255, 0.407);
-   width: 94%;
-   margin: auto;
-   margin-top: 4rem;
-   padding-top: 2rem;
-}
-   .aside-content-box{
-      width: 90%;
-      margin: auto;
-   }
-
-      .how-to-use{
-         border: 1px solid white;
-         margin-bottom: 6rem;
-      }
-         .how-to-use ol{
-            padding-top: .5rem;
-         }
-         .how-to-use li{
-            margin-left: 4rem;
-            color: white;
-            padding-bottom: .5rem;
-         }
-
-      .my-other-sites{
-         color: white;
-      }
-         .my-other-sites p{
-            text-align: left;
-            font-size: 1.4rem;
-            border-bottom: 4px solid var(--pointColor);
-            margin-bottom: .4rem;
-         }
-         .my-other-sites a{
-            display: block;
-         }
-         .my-other-sites a::before{
-            content: "#";
-            padding-right: .4rem;
-         }
-         .my-other-sites a:nth-child(odd){
-            color: white;
-         }
-         .my-other-sites a:nth-child(even){
-            color: rgb(252, 217, 255);
-         }
-
-      .miwa-introduction{
-         color: white;
-         margin-top: 3rem;
-      }
-         .for-tablet-about-miwa{
-            font-size: 1.4rem;
-            text-align: left;
-            border-bottom: 4px solid var(--pointColor);
-         }
-
-         .img-box p{
-            display: none;
-         }
-
-         .introduction-list li{
-            list-style: none;
-            font-style: italic;
-            font-size: 1.1rem;
-            border-bottom: 1px solid white;
-            width: 11rem;
-         }
-         .introduction-list li::before{
-            content: "★";
-            padding-right: .2rem;
-         }
-
-         .introduction-text{
-            padding-bottom: 4rem;
-         }
-            .introduction-text p{
-               margin-top: .4rem;
-            }
-
-footer{
-   background-color: black;
-   color: white;
-   text-align: center;
-   width: 100%;
-   height: 8rem;
-}
-   footer span{
-      display: block;
-      border-bottom: 2px solid white;
-      max-width: 400px;
-      width: 95%;
-      margin: auto;
-      font-size: 1.2rem;
-      padding-top: 2rem;
-   }
-
-   footer p:nth-child(2){
-      padding-top: .2rem;
-   }
-   footer p:nth-child(2)::before{
-      content: "©";
-      padding-right: .4rem;
-   }
-
-
-
-   .img-box img{
-      display: block;
-      width: 90%;
-      max-width: 360px;
-      margin-right: auto;
-      margin-top: .4rem;
-      margin-bottom: .4rem;
-   }
-}
