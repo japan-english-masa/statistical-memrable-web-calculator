@@ -1,227 +1,361 @@
-//line share button box
-const lineBtn=document.getElementById("line-button-box");
-const thank=document.getElementById("line-thank-button")
-lineBtn.addEventListener("click",()=>{
-   thank.classList.remove("displayNone");
-   thank.classList.add("line-thank-animation");
-})
+@charset 'utf-8';
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+   color: white;
+}
+/* ~699px, 700~1099px, 1100px~ */
+
+.display-none{
+   display: none;
+}
+.opacity0{
+   opacity: 0;
+}
+
+.fadeIn2s{
+   transition: all 2s ease-out;
+   opacity: 1;
+   transform: translateY(1rem);
+}
 
 
 
-//about calculation
-let divisionNumber=0;
-const statistics1=document.getElementById("argmin-solo");
-const statistics2=document.getElementById("argmin-solo-only-beta0");
-const statistics3=document.getElementById("argmin-solo-only-beta1");
-const statistics4=document.getElementById("mean");
-const statistics5=document.getElementById("variance");
-const statistics6=document.getElementById("covariance");
-const statistics7=document.getElementById("population-mean");
-const statistics8=document.getElementById("population-variance");
-const statistics9=document.getElementById("uncertainty");
-const statistics10=document.getElementById("x+uncertainty");
+.neon-blue-small{
+   animation: neon-blue-small 1.5s ease-in-out infinite alternate;
+}
+@keyframes neon-blue-small {
+   from{
+     text-shadow: 0 0 10px #fff, 0 0 20px #228dff;
+   }
+   to{
+     text-shadow: 0 0 5px #fff, 0 0 10px #228dff;
+   }
+}
 
-const statArr=["space",statistics1,statistics2,statistics3,statistics4,statistics5,statistics6,statistics7,statistics8,statistics9,statistics10];
+.neon-blue{
+   animation: neon-blue 1.5s ease-in-out infinite alternate;
+}
+@keyframes neon-blue {
+   from{
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 80px #228dff, 0 0 150px #228dff;
+   }
+   to{
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 40px #228dff, 0 0 75px #228dff;
+   }
+}
 
-for(let j=1;j<statArr.length;j++){
-   statArr[j].addEventListener("click",()=>{
-      
-      divisionNumber=j;
-   
-      for(let i=1;i<statArr.length;i++){
-         if(i != divisionNumber){
-            statArr[i].style.color="black";
-            statArr[i].style.backgroundColor="rgb(236, 236, 236)";
-         }else{
-            statArr[i].style.color="white";
-            statArr[i].style.backgroundColor="#ae3ce3";
+.neon-orange{
+   animation: neon-orange 1.5s ease-in-out infinite alternate;
+}
+@keyframes neon-orange {
+   from{
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px rgb(255, 206, 47),
+        0 0 70px rgb(255, 206, 47), 0 0 80px rgb(255, 206, 47), 0 0 100px rgb(255, 206, 47), 0 0 150px rgb(255, 206, 47), 0 0 200px rgb(255, 206, 47);
+    }
+    to{
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px rgb(255, 206, 47),
+        0 0 35px rgb(255, 206, 47), 0 0 40px rgb(255, 206, 47), 0 0 50px rgb(255, 206, 47), 0 0 75px rgb(255, 206, 47), 0 0 100px rgb(255, 206, 47);
+    }
+}
+
+.neon-orange-small{
+   animation: neon-orange-small 1.5s ease-in-out infinite alternate;
+}
+@keyframes neon-orange-small {
+   from{
+      text-shadow: 0 0 10px #fff, 0 0 20px rgb(255, 206, 47);
+    }
+    to{
+      text-shadow: 0 0 5px #fff, 0 0 10px rgb(255, 206, 47);
+    }
+}
+
+
+.disappear-animation{
+   animation: disappear-animation 2s ease-in-out forwards;
+}
+@keyframes disappear-animation {
+   from{
+      opacity: 1;
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(255, 206, 47),
+      0 0 70px rgb(255, 206, 47), 0 0 80px rgb(255, 206, 47), 0 0 100px rgb(255, 206, 47), 0 0 150px rgb(255, 206, 47), 0 0 200px rgb(255, 206, 47);
+   }
+   to{
+      opacity: 0;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(255, 206, 47),
+        0 0 35px rgb(255, 206, 47), 0 0 40px rgb(255, 206, 47), 0 0 50px rgb(255, 206, 47), 0 0 75px rgb(255, 206, 47), 0 0 100px rgb(255, 206, 47);
+   }
+}
+
+
+ 
+
+
+.hero-wrap{
+   overflow: hidden;
+   position: relative;
+}
+
+.hero-wrap:before {
+   animation: hero-wrap 7s ease-out forwards;
+   background: #fff;
+   bottom: 0;
+   content: '';
+   left: 0;
+   pointer-events: none;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: 1;
+}
+
+@keyframes hero-wrap {
+   5%{
+      opacity: 1;
+   }
+   80%{
+      opacity: 0;
+   }
+   100%{
+      transform: translateX(100%);
+      opacity: 0;
+   }
+}
+
+.hero-area-circle{
+   border: .2rem solid black;
+   border-radius: 50%;
+   position: relative;
+}
+   .new-world{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      text-align: center;
+   }
+   .new-world-miwa{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 80%);
+   }
+
+   @media screen and (max-width:699px) {
+   .hero-area-circle{
+      width: 20rem;
+      height: 20rem;
+      margin: auto;
+      margin-top: 6rem;
+      margin-bottom: 16rem;
+   }
+      .new-world{
+         font-size: 2rem;
+         width: 15rem;
+      }
+      .new-world-miwa{
+         font-size: .9rem;
+      }
+   }
+   @media screen and (min-width:700px) and (max-width:1099px) {
+      .hero-area-circle{
+         width: 40rem;
+         height: 40rem;
+         margin: auto;
+         margin-top: 10rem;
+         margin-bottom: 16rem;
+      }
+         .new-world{
+            font-size: 3rem;
+            width: 25rem;
          }
+         .new-world-miwa{
+            font-size: 1.5rem;
+         }
+   }
+   @media screen and (min-width:1100px) {
+      .hero-area-circle{
+         width: 35rem;
+         height: 35rem;
+         margin: auto;
+         margin-top: 4rem;
+         margin-bottom: 16rem;
       }
-   
-      if(j===1 || j===2 || j===3 || j===6){
-         document.getElementById("input-text-second").classList.remove("displayNone");
-      }else{
-         document.getElementById("input-text-second").classList.add("displayNone");
+         .new-world{
+            font-size: 3rem;
+            width: 25rem;
+         }
+         .new-world-miwa{
+            font-size: 1.5rem;
+         }
+   }
+
+
+.transition-from-hero{
+   background: linear-gradient(to bottom, white, black);
+   width: 100%;
+   height: 80rem;
+}
+
+.description-box{
+   background-color: black;
+   width: 100%;
+   padding-top: 30rem;
+   padding-bottom: 8rem;
+   color: white;
+   text-align: center;
+   margin-top: -4px;
+}
+   @media screen and (max-width:699px) {
+   .description-box{
+      font-size: 1.5rem;
+   }
+   }
+   @media screen and (min-width:700px) and (max-width:1099px) {
+   .description-box{
+      font-size: 2rem;
+   }
+   }
+   @media screen and (min-width:1100px) {
+   .description-box{
+      font-size: 2rem;
+   }
+   }
+
+@media screen and (max-width:699px) {
+   .description-box p:first-child{
+      margin-bottom: 4rem;
+   }
+}
+@media screen and (min-width:700px) and (max-width:1099px) {
+   .description-box p:first-child{
+      margin-bottom: 5rem;
+   }
+}
+@media screen and (min-width:1100px) {
+   .description-box p:first-child{
+      margin-bottom: 6rem;
+   }  
+}
+.welcome-underbar span{
+   position: relative;
+}
+.welcome-underbar span::before{
+   position: absolute;
+   bottom: -4px;
+   left: 50%;
+   transform: translateX(-50%);
+   content: "";
+   width: 0;
+   height: 1px;
+   background-color: rgba(255, 255, 255, 0.748);
+   animation: welcome-underbar-widen 3s ease-out forwards;
+}
+   @keyframes welcome-underbar-widen {
+      from{
+         width: 0;
+         opacity: 0;
       }
-
-   })
-}
-
-
-
-
-function getArr1Func(input1){    //1st valuesの配列を生成＆全角入力へのアラート
-   const inputTextArr1=input1.split(",");
-   const inputArr1=[];
-   for(let i=0;i<inputTextArr1.length;i++){
-      if( inputTextArr1.indexOf("０") != -1 || inputTextArr1.indexOf("１") != -1 || inputTextArr1.indexOf("２") != -1 || inputTextArr1.indexOf("３") != -1 || inputTextArr1.indexOf("４") != -1 || inputTextArr1.indexOf("５") != -1 || inputTextArr1.indexOf("６") != -1 || inputTextArr1.indexOf("７") != -1 || inputTextArr1.indexOf("８") != -1 || inputTextArr1.indexOf("９") != -1 ){
-         alert("半角で入力してください");
-         break;
+      to{
+         width: 150%;
+         opacity: 1;
       }
-      let inputArr1element=parseFloat(inputTextArr1[i]);
-      inputArr1.push(inputArr1element);
    }
-   return inputArr1;
+
+
+.click-here{
+   color: white;
+   background-color: black;
+   border: none;
+   cursor: pointer;
+}
+   @media screen and (max-width:699px) {
+      .click-here{
+         font-size: 1.5rem;
+      }
+   }
+   @media screen and (min-width:700px) and (max-width:1099px) {
+      .click-here{
+         font-size: 2rem;
+      }
+   }
+   @media screen and (min-width:1100px) {
+      .click-here{
+         font-size: 2rem;
+         padding: 4rem;
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+   }
+
+
+.portfolio-list-box{
+   color: white;
+}
+@media screen and (max-width:699px) {
+   .portfolio-list-box a{
+      font-size: 1.2rem;
+      line-height: 2rem;
+      padding-left:10vw;
+   }
+}
+@media screen and (min-width:700px) and (max-width:1099px) {
+   .portfolio-list-box a{
+      font-size: 1.5rem;
+      line-height: 3rem;
+      padding-left:18vw;
+   }
+}
+@media screen and (min-width:1100px) and (max-width:1199px){
+   .portfolio-list-box a{
+      font-size: 1.5rem;
+      line-height: 3rem;
+      padding-left:20vw;
+   }
+}
+@media screen and (min-width:1200px) {
+   .portfolio-list-box-flex{
+      display: flex;
+      justify-content: space-around;
+   }
+   .portfolio-list-box a{
+      font-size: 1.5rem;
+      line-height: 3rem;
+   }
+}
+.portfolio-list-box a{
+   text-align: left;
+   display: block;
 }
 
-function getArr2Func(input2){    //2nd valuesの配列を生成
-   const inputTextArr2=input2.split(",");
-   const inputArr2=[];
-   for(let i=0;i<inputTextArr2.length;i++){
-      let inputArr2element=parseFloat(inputTextArr2[i]);
-      inputArr2.push(inputArr2element);
-   }
-   return inputArr2;
+
+.contact{
+   padding-bottom: 4rem;
 }
-
-
-function meanFunc(Arr){    //平均値を求める
-   let sum=0;
-   for(let i=0;i<Arr.length;i++){
-      sum+=Arr[i];
+   .contact p{
+      margin-bottom: .5rem !important;
+      font-size: 1.2rem;
    }
-   let mean=sum / Arr.length;
-   return mean;
+
+   .contact a{
+      display: inline-block;
+      padding-left: 0;
+      font-size: 1.2rem;
+   }
+
+#reset-local-strage-btn{
+   cursor: pointer;
+   background-color: black;
+   color: white;
+   width: 6rem;
+   height: 1rem;
+   box-shadow: none;
+   border: none;
+   margin-top: 6.5rem;
+   position: absolute;
+   right: 0;
 }
-
-function squareMeanFunc(Arr){    //2乗の平均値を求める
-   let squareSum=0;
-   for (let i=0;i<Arr.length;i++){
-      squareSum+=Arr[i] ** 2;
-   }
-   let squareMean=squareSum / Arr.length;
-   return squareMean;
-}
-
-function productMeanFunc(Arr1,Arr2){    //積の平均値を求める
-   let productSum=0;
-   for(let i=0;i<Arr1.length;i++){
-      productSum+=Arr1[i] * Arr2[i];
-   }
-   let productMean=productSum / Arr1.length;
-   return productMean;
-}
-
-
-
-const inputButton=document.getElementById("input-button");
-
-inputButton.addEventListener("click",()=>{
-   let Arr1=getArr1Func(document.getElementById("input-text").value);
-   const pointer=document.getElementById("memory-dammy");
-
-   switch(divisionNumber){
-      case 1:    //argmin-solo
-         let Arr2In1=getArr2Func(document.getElementById("input-text-second").value);
-         let meanX1=meanFunc(Arr1);
-         let meanY1=meanFunc(Arr2In1);
-         let varianceX1=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
-         let covariance1=productMeanFunc(Arr1,Arr2In1) - meanFunc(Arr1)*meanFunc(Arr2In1);
-         let beta_1In1=covariance1/varianceX1;
-         let beta_0In1=meanY1 - beta_1In1 * meanX1;
-         console.log(`(β0,β1) = (${beta_0In1}, ${beta_1In1})`);
-
-         let item1=document.createElement("p");
-         item1.textContent=`(β0,β1) = (${Math.round(beta_0In1*1000)/1000}, ${Math.round(beta_1In1*1000)/1000})`;
-         pointer.prepend(item1);
-         break;
-
-      case 2:    //argmin-solo-only-beta0
-         let Arr2In2=getArr2Func(document.getElementById("input-text-second").value);
-         let beta_0In2=meanFunc(Arr2In2);
-         console.log(beta_0In2);
-
-         let item2=document.createElement("p");
-         item2.textContent=`β0 = ${Math.round(beta_0In2*1000)/1000}`;
-         pointer.prepend(item2);
-         break;
-
-      case 3:    //argmin-solo-only-beta1
-         let Arr2In3=getArr2Func(document.getElementById("input-text-second").value);
-         let beta_1In3=productMeanFunc(Arr1,Arr2In3) / squareMeanFunc(Arr1);
-         console.log(beta_1In3);
-
-         let item3=document.createElement("p");
-         item3.textContent=`β1 = ${Math.round(beta_1In3*1000)/1000}`;
-         pointer.prepend(item3);
-         break;
-
-      case 4:    //mean
-         let mean4=meanFunc(Arr1);
-         console.log(mean4);
-
-         let item4=document.createElement("p");
-         item4.textContent=`x- = ${Math.round(mean4*1000)/1000}`;
-         pointer.prepend(item4);
-         break;
-
-      case 5:    //variance
-         let variance5=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
-         console.log(variance5);
-
-         let item5=document.createElement("p");
-         item5.textContent=`Sxx = ${Math.round(variance5*1000)/1000}`;
-         pointer.prepend(item5);
-         break;
-
-      case 6:    //covariance
-         let Arr2In6=getArr2Func(document.getElementById("input-text-second").value);
-         let covariance6=productMeanFunc(Arr1,Arr2In6) - meanFunc(Arr1)*meanFunc(Arr2In6);
-         console.log(covariance6);
-
-         let item6=document.createElement("p");
-         item6.textContent=`Sxy = ${Math.round(covariance6*1000)/1000}`;
-         pointer.prepend(item6);
-         break;
-
-      case 7:    //population-mean
-         let populationMean7=meanFunc(Arr1);
-         console.log(populationMean7);
-
-         let item7=document.createElement("p");
-         item7.textContent=`μ = ${Math.round(populationMean7*1000)/1000}`;
-         pointer.prepend(item7);
-         break;
-      
-      case 8:    //population-variance
-         let variance8=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
-         let populationVariance8=(Arr1.length/(Arr1.length-1))*variance8;
-         console.log(populationVariance8);
-
-         let item8=document.createElement("p");
-         item8.textContent=`σ^2 = ${Math.round(populationVariance8*1000)/1000}`;
-         pointer.prepend(item8);
-         break;
-
-      case 9:    //uncertainty
-         let variance9=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
-         let populationVariance9=(Arr1.length/(Arr1.length-1))*variance9;
-         let uncertainty9=populationVariance9 ** (1/2);
-         console.log(uncertainty9);
-
-         let item9=document.createElement("p");
-         item9.textContent=`σ = ${Math.round(uncertainty9*1000)/1000}`;
-         pointer.prepend(item9);
-         break;
-
-      case 10:    //x±uncertainty
-         let variance10=squareMeanFunc(Arr1) - meanFunc(Arr1) ** 2;
-         let populationVariance10=(Arr1.length/(Arr1.length-1))*variance10;
-         let uncertainty10=populationVariance10 ** (1/2);
-         let populationMean10=meanFunc(Arr1);
-         let x_uncertainty10=populationMean10+" "+"±"+" "+uncertainty10;
-         console.log(x_uncertainty10);
-
-         let item10=document.createElement("p");
-         item10.textContent=`x±Δx = ${Math.round(populationMean10*1000)/1000} ± ${Math.round(uncertainty10*1000)/1000}`;
-         pointer.prepend(item10);
-         break;
-
-
-         
-
-      default:
-         console.log("Error");
-   }
-})
-
